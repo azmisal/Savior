@@ -85,7 +85,13 @@ const config: Config = {
       },
       width:{
         'custom-box-hover':'95%',
-      }
+      },
+      transitionTimingFunction: {
+        'ease-in-out-linear': 'ease-in-out linear',
+      },
+      transitionDuration: {
+        '1000': '1000ms',
+      },
     },
 
   },
