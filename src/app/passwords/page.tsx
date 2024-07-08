@@ -6,6 +6,8 @@ import { IoMdCheckmarkCircleOutline } from "react-icons/io";
 import { IoIosCopy } from "react-icons/io";
 import SpinLoader from "../Components/SpinLoader";
 import { FiEdit } from "react-icons/fi";
+import { FaRegEye } from "react-icons/fa6";
+import { FaRegEyeSlash } from "react-icons/fa6";
 
 interface User {
   id: number;
@@ -21,6 +23,7 @@ export default function Password() {
     { id: 2, username: 'Jane Smith', password: 'jane@example.com' },
     { id: 3, username: 'Mike Johnson', password: 'mike@example.com' },
   ]);
+  const [visibility, setVisibility] = useState<string | boolean>(false);
   const [newUser, setNewUser] = useState<User>({ id: 0, username: '', password: '' });
   const [loading, setLoading] = useState<boolean>(false);
   const [editUser, setEditUser] = useState<User | null>(null);
@@ -136,11 +139,12 @@ export default function Password() {
                       className="w-52 p-2 mr-2 bg-gray-800 text-white ml-4"
                     />
                   ) : (
-                    <span className="w-52 p-2 mr-2 bg-gray-800 overflow-x-hidden block ml-4">
-                      {user.password}
+                    <span className="w-52 p-2 mr-2 bg-gray-800 overflow-x-hidden block ml-4" typeof="password">
+                      {visibility===user.password ? user.password : "********"}
                     </span>
                   )}
                 </h1>
+                {visibility===user.password ? <FaRegEye onClick={()=>setVisibility(false)} className="text-zinc-400 cursor-pointer active:text-black mr-4"/> : <FaRegEyeSlash className="text-zinc-400 cursor-pointer active:text-black mr-4" onClick={()=>setVisibility(user.password)}/>}
                 {clickedIndex === user.password ? (
                   <IoMdCheckmarkCircleOutline className="text-green-500 cursor-pointer mr-4 " />
                 ) : (
@@ -159,6 +163,7 @@ export default function Password() {
                     onClick={() => handleEdit(user,user.password)}
                   />
                 )}
+
               </div>
             </div>
           ))}

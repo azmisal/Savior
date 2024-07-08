@@ -1,0 +1,43 @@
+.Text {
+    /* Add any styles for .Text class */
+  }
+  
+  .card,
+  .addCard {
+    background-color: rgba(0, 0, 0, 0.394);
+  }
+  
+  .addCard {
+    animation: big 0.15s linear; /* Initial animation when opening */
+  }
+  
+  .addCard.hidden {
+    animation: small 0.15s linear forwards; /* Reverse animation when closing */
+  }
+  
+  .addtext {
+    display: flex;
+  }
+  
+  @keyframes big {
+    0% {
+      transform: scale(0);
+      transform-origin: top left; /* Start scaling from top-left corner */
+    }
+    100% {
+      transform: scale(1);
+      transform-origin: top left; /* Maintain top-left corner as origin */
+    }
+  }
+  
+  @keyframes small {
+    0% {
+      transform: scale(1);
+      transform-origin: top left; /* Start scaling from top-left corner */
+    }
+    100% {
+      transform: scale(0);
+      transform-origin: top left; /* Maintain top-left corner as origin */
+    }
+  }
+  
