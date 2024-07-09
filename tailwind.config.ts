@@ -81,7 +81,8 @@ const config: Config = {
       },
       backgroundColor: {
         'custom-blue': 'rgb(47 15 164 / 31%)',
-        'secBlue': '#001640'
+        'secBlue': '#001640',
+        'dark-bg': 'rgba(0, 0, 0, 0.394);'
       },
       width:{
         'custom-box-hover':'95%',
