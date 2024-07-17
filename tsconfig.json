@@ -21,6 +21,6 @@
       "@/*": ["./src/*"]
     }
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts", "src/app/passwords/page.tsx", "src/lib/db.js", "src/app/api/saved-passwords/route.js"],
+  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts", "src/app/passwords/page.tsx", "src/lib/db.js", "src/app/api/saved-passwords/route.js", "src/lib/mongodb.js", "src/app/api/utils/db.js"],
   "exclude": ["node_modules"]
 }

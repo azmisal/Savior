@@ -54,7 +54,7 @@ export default function Component() {
             <span className="sr-only">Acme Inc</span>
           </Link>
           <div className="grid gap-2 py-6">
-            <Link href="/" className="flex w-full items-center py-2 text-lg font-semibold" prefetch={false}>
+            <Link href="/" className="flex w-full items-center py-2 text-lg font-semibold" prefetch={true}>
               HOME
             </Link>
             <Link href="/passwords" className="flex w-full items-center py-2 text-lg font-semibold" prefetch={false}>
@@ -69,6 +69,9 @@ export default function Component() {
             <Link href="/signup" className="flex w-full items-center py-2 text-lg font-semibold" prefetch={false}>
               Signup
             </Link>
+            <Link href="/tester" className="flex w-full items-center py-2 text-lg font-semibold" prefetch={false}>
+              Tester
+            </Link>
           </div>
         </SheetContent>
       </Sheet>
@@ -80,7 +83,7 @@ export default function Component() {
         <Link
           href="/"
           className="group inline-flex h-9 w-max items-center justify-center rounded-md text-gray-400 px-4 py-2 text-sm font-medium transition-colors hover:bg-dark-bg hover:text-gray-200 focus:bg-gray-100 focus:text-gray-900 focus:outline-none disabled:pointer-events-none disabled:opacity-50 data-[active]:bg-gray-100/50 data-[state=open]:bg-gray-100/50 dark:bg-gray-950 dark:hover:bg-gray-800 dark:hover:text-gray-50 dark:focus:bg-gray-800 dark:focus:text-gray-50 dark:data-[active]:bg-gray-800/50 dark:data-[state=open]:bg-gray-800/50"
-          prefetch={false}
+          prefetch={true}
         >
           HOME
         </Link>
@@ -111,6 +114,13 @@ export default function Component() {
           prefetch={false}
         >
           SIGNUP
+        </Link>
+        <Link
+          href="/tester"
+          className="group inline-flex h-9 w-max items-center justify-center rounded-md text-gray-400 px-4 py-2 text-sm font-medium transition-colors hover:bg-dark-bg hover:text-gray-200 focus:bg-gray-100 focus:text-gray-900 focus:outline-none disabled:pointer-events-none disabled:opacity-50 data-[active]:bg-gray-100/50 data-[state=open]:bg-gray-100/50 dark:bg-gray-950 dark:hover:bg-gray-800 dark:hover:text-gray-50 dark:focus:bg-gray-800 dark:focus:text-gray-50 dark:data-[active]:bg-gray-800/50 dark:data-[state=open]:bg-gray-800/50"
+          prefetch={false}
+        >
+          Tester
         </Link>
       </nav>
     </header>
